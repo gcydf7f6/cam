@@ -1,42 +1,134 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cam</title>
-  <meta name="description" content="cam's corner of the web" />
-  <link rel="icon" href="https://i.postimg.cc/26vfksmD/cam-avatar.png" type="image/png" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class'
-    }
-  </script>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    .transition-all {
-      transition: all 0.3s ease-in-out;
-    }
-  </style>
-</head>
-<body class="bg-white dark:bg-[#0d1117] text-black dark:text-white transition-all min-h-screen flex items-center justify-center p-4">
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="cam" />
+    <meta name="keywords" content="cam, profile, bio, youtube, discord, tiktok" />
+    <title>cam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Helvetica, Arial, sans-serif;
+        transition: background 0.3s ease, color 0.3s ease;
+      }
+      .animate-fade {
+        animation: fadeIn 1.2s ease forwards;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white text-black dark:bg-black dark:text-white transition-colors duration-500">
+    <div class="min-h-screen flex flex-col items-center justify-center p-4">
+      <!-- Dark/Light Toggle -->
+      <button
+        onclick="document.documentElement.classList.toggle('dark')"
+        class="fixed top-4 right-4 bg-gray-200 dark:bg-gray-800 text-black dark:text-white px-4 py-2 rounded-full shadow-lg transition-all duration-300 hover:scale-105"
+      >
+        Toggle 🌙/☀️
+      </button>
 
-  <!-- Toggle Button -->
-  <button id="toggleTheme" class="absolute top-4 right-4 bg-gray-200 dark:bg-gray-700 text-black dark:text-white px-4 py-2 rounded-full text-sm shadow-md hover:scale-105 transition-all">
-    Toggle Theme
-  </button>
+      <div
+        class="bg-gray-100 dark:bg-gray-900 rounded-3xl shadow-xl p-8 md:p-10 max-w-md w-full flex flex-col items-center text-center space-y-6 transform transition-all duration-300 hover:scale-[1.02] animate-fade"
+      >
+        <!-- Profile Image -->
+        <div
+          class="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white shadow-2xl"
+        >
+          <img
+            src="1000003856.jpg"
+            alt="Profile"
+            class="w-full h-full object-cover"
+            onerror="this.onerror=null; this.src='https://placehold.co/160x160/111111/FFFFFF?text=Error';"
+          />
+          <div
+            class="absolute inset-0 rounded-full ring-2 ring-pink-400 dark:ring-white animate-pulse"
+          ></div>
+        </div>
 
-  <!-- Profile Card -->
-  <div class="bg-gray-100 dark:bg-[#161b22] rounded-2xl shadow-2xl p-8 md:p-10 max-w-md w-full text-center space-y-6 transition-all hover:scale-[1.015]">
+        <!-- Name -->
+        <h1
+          class="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-pink-600 dark:text-white"
+        >
+          cam
+        </h1>
 
-    <!-- Profile Image -->
-    <div class="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white dark:border-gray-600 shadow-xl mx-auto">
-      <img
-        src="1000003856.jpg"
-        alt="Cam Profile"
-        class="w-full h-full object-cover"
-      />
-      <div class="absolute inset-0 rounded-full ring-2 ring-pink-400 ring-opacity-40 animate-pulse"></div>
+        <!-- Bio (unchanged) -->
+        <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-prose">
+          i love my gf<br />
+          blah blah coding is fun<br />
+          orixo, ella, nala, bigboi, banna, table, rocky, giggles, freaky doodoobug,
+          barkin, ian, bigboi.
+        </p>
+
+        <!-- Links -->
+        <div class="flex flex-wrap justify-center gap-4 mt-4">
+          <a
+            href="https://discord.gg/26VP7pf2tk"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center space-x-2"
+          >
+            <i class="fa-brands fa-discord text-xl"></i>
+            <span>nova tag</span>
+          </a>
+          <a
+            href="https://www.youtube.com/@shmsrayden"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-black hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center space-x-2 border border-white"
+          >
+            <i class="fa-brands fa-youtube text-xl"></i>
+            <span>yt</span>
+          </a>
+          <a
+            href="https://www.tiktok.com/@raydenonvr"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center space-x-2"
+          >
+            <i class="fa-brands fa-tiktok text-xl"></i>
+            <span>tt</span>
+          </a>
+        </div>
+
+        <!-- Skills -->
+        <div class="w-full mt-6 pt-6 border-t border-gray-300 dark:border-gray-700">
+          <h2 class="text-2xl font-bold mb-4 text-pink-500 dark:text-white">
+            skills that yes
+          </h2>
+          <div class="flex flex-wrap justify-center gap-2">
+            <span
+              class="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-400 text-sm px-3 py-1 rounded-full border border-gray-300 dark:border-gray-700"
+              >learned html</span
+            >
+            <span class="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-400 text-sm px-3 py-1 rounded-full border border-gray-300 dark:border-gray-700">learned react</span>
+            <span class="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-400 text-sm px-3 py-1 rounded-full border border-gray-300 dark:border-gray-700">learned python</span>
+            <span class="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-400 text-sm px-3 py-1 rounded-full border border-gray-300 dark:border-gray-700">learned c#</span>
+            <span class="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-400 text-sm px-3 py-1 rounded-full border border-gray-300 dark:border-gray-700">learned javascript</span>
+          </div>
+        </div>
+      </div>
+
+      <footer class="mt-8 text-gray-600 dark:text-gray-400 text-sm">
+        built by 𖣂cam𖣂, ©CAM
+      </footer>
+    </div>
+  </body>
+</html>
