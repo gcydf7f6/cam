@@ -19,43 +19,58 @@
     }
     .card {
       background: rgba(0, 0, 0, 0.6);
-      padding: 30px;
-      border-radius: 16px;
-      max-width: 400px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      padding: 40px; /* bigger padding */
+      border-radius: 20px;
+      max-width: 520px; /* about 30% bigger */
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
     }
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+      font-size: 3rem;
+      margin-bottom: 15px;
       color: #87CEFA;
     }
     h2 {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
+      font-size: 1.8rem;
+      margin-bottom: 25px;
       color: #BA55D3;
     }
     ul {
       list-style: none;
       padding: 0;
-      margin: 0 0 20px 0;
+      margin: 0 0 25px 0;
     }
     ul li {
-      margin: 6px 0;
-      font-size: 1.1rem;
+      margin: 8px 0;
+      font-size: 1.2rem;
     }
     .btn {
       display: inline-block;
-      padding: 12px 20px;
+      padding: 14px 24px;
       background: #87CEFA;
       color: black;
       font-weight: bold;
-      border-radius: 8px;
+      border-radius: 10px;
       text-decoration: none;
       transition: 0.3s;
+      font-size: 1.1rem;
     }
     .btn:hover {
       background: #BA55D3;
       color: white;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -72,4 +87,3 @@
   </div>
 </body>
 </html>
-  
