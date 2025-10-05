@@ -16,7 +16,7 @@
   <style>
     body {
       background-color: #333; /* Gray background */
-      color: #fff; /* Default text color to white */
+      color: #fff;
       font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
@@ -27,12 +27,16 @@
 
     .card {
       background-color: #111;
-      padding: 30px;
+      padding: 40px 30px;
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(255, 68, 51, 0.5);
       text-align: center;
       max-width: 400px;
       width: 90%;
+      min-height: 300px; /* Makes the card taller */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .bio-title {
@@ -45,8 +49,8 @@
     .bio-text {
       font-size: 20px;
       line-height: 1.6;
-      margin-bottom: 25px;
-      color: #fff; /* Make sure bio text is white */
+      margin-bottom: 30px;
+      color: #fff;
     }
 
     .example-button {
@@ -56,16 +60,18 @@
       padding: 10px 20px;
       font-size: 18px;
       font-weight: bold;
-      color: #000;
-      background-color: #87ceeb;
-      border: none;
+      color: #fff;
+      background-color: #000;
+      border: 2px solid #fff;
       border-radius: 5px;
       text-decoration: none;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     .example-button:hover {
-      background-color: #6bb8d6;
+      background-color: #222;
+      color: #ff4433;
+      border-color: #ff4433;
     }
 
     .fa-tiktok {
